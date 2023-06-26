@@ -9,8 +9,9 @@ const HomePage = () => {
 	return (
 		<DefaultLayout>
 			<h1>Home Page</h1>
-			{/* <Spline scene="https://prod.spline.design/qmmzbH9x0kaE-9wb/scene.splinecode" 
-			/> */}
+			<h1>Expert multi-specialty healthcare</h1>
+			<h3>{ homeParagraph }</h3>
+			<img src="https://media.istockphoto.com/id/1295900181/photo/healthcare-and-medicine-covid-19-doctor-holding-tablet-and-diagnose-virtual-human-lungs-with.jpg?s=1024x1024&w=is&k=20&c=UEeNqnrWBdxeRtCOb1bBRSmXyg2ZVIZTP9d-rdCZsTY=" alt="" />
 			
         </DefaultLayout>	
 	);

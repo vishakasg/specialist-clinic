@@ -11,6 +11,17 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import { teal } from '@mui/material/colors';
+
+const color = teal[500]
+const theme = createTheme({
+	palette: {
+		primary: teal,
+		secondary: teal,
+	  },
+	
+  })
+
 
 const pages = [
 	{ name: "Appointments", path: "/appointments" },
@@ -30,18 +41,18 @@ const NavBar = () => {
 	};
 
 	return (
-		<AppBar>
+		<AppBar >
 			<Container maxWidth='xl'>
 				<Toolbar disableGutters>
 					<Typography
-						variant='h6'
+						variant='h5'
 						noWrap
 						component='a'
 						href='/'
 						sx={{
 							flexGrow: 1,
 							display: { xs: "flex", lg: "flex" },
-							fontFamily: "monospace",
+							fontFamily: "Helvetica Neue",
 							fontWeight: 700,
 							letterSpacing: ".3rem",
 							color: "inherit",
