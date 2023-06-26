@@ -71,16 +71,16 @@ const NavBar = () => {
 						<Button
 							onClick={handleCloseNavMenu}
 							sx={{ my: 2, color: "white", display: "block" }}
-                            href='/Appointments'
+                            href='/List'
 						>
-							Appointments Booking
+							Doctors List
 						</Button>
 						<Button
 							onClick={handleCloseNavMenu}
 							sx={{ my: 2, color: "white", display: "block" }}
-                            href='/List'
+                            href='/Appointments'
 						>
-							Doctors List
+							Appointments Booking
 						</Button>
 						<Button
 							onClick={handleCloseNavMenu}

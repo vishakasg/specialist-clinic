@@ -1,12 +1,18 @@
 import DefaultLayout from "../Layout/DefaultLayout";
-import DoctorsListPage from "./List";
+// import DoctorsListPage from "./List";
+import { useState } from "react";
 
 const AppointmentsBookingPage = (event) => {
 	const appointmentsBookingPara = `
 		Fill this form to book your appointments!
 	`;
-	const form = event.target
-	const data = Object.fromEntries(new FormData(form))
+	// const form = event.target
+	// const data = Object.fromEntries(new FormData(form))
+	
+	const[bookingMessage, setBookingMessage] = useState(null)
+	
+	let handleTimeChange = () => {setBookingMessage(`Your appointment is booked.`)}
+	
 
 	return (
 		<DefaultLayout>
@@ -42,9 +48,12 @@ const AppointmentsBookingPage = (event) => {
 					<input  type="time"/>
 					</fieldset>
 					<fieldset>
-					<button>Submit</button>
+					<button onSubmit={ handleTimeChange }>Submit</button>
 					</fieldset>
 				</form>
+				<div>
+					<p>{ bookingMessage }</p>
+				</div>
         </DefaultLayout>	
 	);
 };
