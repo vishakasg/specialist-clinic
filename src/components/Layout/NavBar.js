@@ -41,7 +41,7 @@ const NavBar = () => {
 	};
 
 	return (
-		<AppBar >
+		<AppBar sx={{backgroundColor:'teal'}}>
 			<Container maxWidth='xl'>
 				<Toolbar disableGutters>
 					<Typography
@@ -52,7 +52,7 @@ const NavBar = () => {
 						sx={{
 							flexGrow: 1,
 							display: { xs: "flex", lg: "flex" },
-							fontFamily: "Helvetica Neue",
+							fontFamily: "Cantarell",
 							fontWeight: 700,
 							letterSpacing: ".3rem",
 							color: "inherit",
