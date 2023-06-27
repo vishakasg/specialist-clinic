@@ -5,6 +5,7 @@ import AppointmentsBookingPage from "./components/Pages/Appointments"
 import DoctorsListPage from "./components/Pages/List";
 import HomePage from "./components/Pages/Home";
 import ContactUsPage from "./components/Pages/Contact";
+import BookingsPage from './components/Pages/Bookings';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 			<Routes>
 			  <Route path='/' element={<HomePage />} />
 				<Route path='/Appointments' element={<AppointmentsBookingPage />} />
+				<Route path='/Bookings' element={<BookingsPage />} />
 				<Route path='/List' element={<DoctorsListPage />} />
 				<Route path='/Contact' element={<ContactUsPage />} />
 			</Routes>

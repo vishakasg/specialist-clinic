@@ -21,9 +21,28 @@ const AppointmentsBookingPage = () => {
 		console.log(doctorsList)
 	} , [])
 	
-	let handleBooking = (event) => {
+	const handleBooking = (event) => {
 		event.preventDefault();
-		alert(`Your appointment is booked with on ${ date } at ${ time }.`)}
+		setBookingMessage(`Your appointment is booked on ${ date } at ${ time }.`)
+	
+	
+			const form = event.target
+			const data = Object.fromEntries(new FormData(form))
+
+			fetch('https://64951068b08e17c917919c7c.mockapi.io/api/appointment', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data)
+			  })
+				.then(res => res.json())
+				// .then(event => {
+				//   state.events.push(event)
+				  
+				// })
+			
+		}
+		
+	
 	
 
 	return (
@@ -35,39 +54,42 @@ const AppointmentsBookingPage = () => {
 					<h2>Appointment Requests</h2>
 					<fieldset>
 					<label for="">Patient Name: </label>
-            		<input type="text" value={ name } onChange={(e) => setName(e.target.value)}></input>
+            		<input type="text" name="patient-name" value={ name } onChange={(e) => setName(e.target.value)}></input>
 					</fieldset>
 					<fieldset>
 					<label for="">Email: </label>
-            		<input type="text" value={ email } onChange={(e) => setEmail(e.target.value)}></input>
+            		<input type="text" name="email" value={ email } onChange={(e) => setEmail(e.target.value)}></input>
 					</fieldset>
 					<fieldset>
 					<label for="">Phone: </label>
-            		<input type="text" value={ phoneNo } onChange={(e) => setPhoneNo(e.target.value)}></input>
+            		<input type="text" name="phone-no" value={ phoneNo } onChange={(e) => setPhoneNo(e.target.value)}></input>
 					</fieldset>
 					<fieldset>
 					<label for="">Preferred Doctor: </label>
 					<select>
 					{doctorsList.map((doctor, index) => (
-					<option id={doctor.name} key={index}>{doctor.name}</option>
+					<option className="doctor-name" id={doctor.name} key={index}>{doctor.name}</option>
 					))}
 					</select>
 					</fieldset>
 					<fieldset>
 					<label for="start">Appointment Date:</label>
-					<input type="date" id="start" name="trip-start"
+					<input type="date" id="start" name="date"
        				min="2023-01-01" 		max="2024-12-31" value={ date } onChange={(e) => setDate(e.target.value)}/>
 					</fieldset>
 					<fieldset>
 					<label>Appointment Time: </label>
-					<input  type="time" value={ time } onChange={(e) => setTime(e.target.value)}/>
+					<input  type="time" name="time" value={ time } onChange={(e) => setTime(e.target.value)}/>
 					</fieldset>
 					<fieldset>
 					<button>Submit</button>
 					</fieldset>
 				</form>
+
 				<div onChange={(e) => setBookingMessage(e.target.value)}>
+					
 					<p>{ bookingMessage }</p>
+
 				</div>
         </DefaultLayout>	
 	);

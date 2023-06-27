@@ -13,18 +13,9 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { teal } from '@mui/material/colors';
 
-const color = teal[500]
-const theme = createTheme({
-	palette: {
-		primary: teal,
-		secondary: teal,
-	  },
-	
-  })
-
-
 const pages = [
 	{ name: "Appointments", path: "/appointments" },
+	{ name: "Bookings", path: "/bookings" },
 	{ name: "List", path: "/list" },
 	{ name: "Contact", path: "/contact" },
 ];
@@ -81,6 +72,13 @@ const NavBar = () => {
                             href='/Appointments'
 						>
 							Appointments Booking
+						</Button>
+						<Button
+							onClick={handleCloseNavMenu}
+							sx={{ my: 2, color: "white", display: "block" }}
+                            href='/Bookings'
+						>
+							 Bookings
 						</Button>
 						<Button
 							onClick={handleCloseNavMenu}
