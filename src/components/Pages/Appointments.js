@@ -43,7 +43,7 @@ const AppointmentsBookingPage = () => {
 	return (
 		<DefaultLayout>
 
-			<h1>Appointments Booking Page</h1>
+			<h1>Appointment Booking Page</h1>
 			<h2>Appointment Requests</h2>
 				<form onSubmit={ handleBooking }> 
 					<h5>{ appointmentsBookingPara}</h5>
@@ -61,7 +61,7 @@ const AppointmentsBookingPage = () => {
 					</fieldset>
 					<fieldset>
 					<label for="">Preferred Doctor: </label>
-					<select name="doctorName">
+					<select className="doc" name="doctorName">
 					{doctorsList.map((doctor, index) => (
 					<option id={doctor.name} key={index}>{doctor.name}</option>
 					))}

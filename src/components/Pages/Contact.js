@@ -6,15 +6,17 @@ const ContactUsPage = () => {
 	`;
 	const phoneNo = `(03) 4242 4239`
 	const address = `144 Pearson Street, Adelaide, SA, 5000`
-	const hours =  `Monday - Friday (9am to 5pm)`
+	const hours =  `Monday - Friday (9am to 6pm)`
 
 	return (
 		<DefaultLayout>
-			<h1>Contact Us</h1>
-			<h2>{ contactUsPara }</h2>
-			<h3>Phone No: { phoneNo }</h3>
-			<h3>Address: { address }</h3>
-			<h3>Openning Hours: { hours }</h3>
+			<div className="contacts">
+				<h1>Contact Us</h1>
+				<h2>{ contactUsPara }</h2>
+				<h3>Phone No: { phoneNo }</h3>
+				<h3>Address: { address }</h3>
+				<h3>Opening Hours: { hours }</h3>
+			</div>
         </DefaultLayout>	
 	);
 };

@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# specialist-clinic-app
+## 💻 [Click here](https://specialist-clinic.surge.sh/) to see my live project.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This is a pure front-end app that I have created for my GA final project. This app is created for specialist medical clinic to manage the appoinment bookings.
 
-In the project directory, you can run:
+Some features of the app:
+- User-friendly interface that allows easy navigation and interaction. 
+- Users able to view a list of doctors along with their specialties. 
+- Users able to filter doctors based on specialties. 
+- Users able to schedule appointments by filling out a form that captures relevant information. 
+- Users able to check upcoming appointments list.
 
-### `npm start`
+## Wireframe
+![wireframe](static/images/wireframe.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Cool tech
+- Framework: React
+- React component library: Material UI/Icons 
+- Coding Languages: JavaScript, HTML, CSS
+- API: mockapi.io
+- Code editor: Visual Studio
+- Deployment: Surge
 
-### `npm test`
+## :bug: Bugs to fix :scream:
+- Users shouldn't be able to schedule an appointment if the doctor is not available on the time of choice.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## :sob: Lessons learnt
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- How to use API mock data
+- Usage of useState and useEffect hooks in react
+- Usage of Material UI library
+- When debugging, start the process by console logging and do the changes line by line and test them.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ✅ Future features
+- Make the app more responsive to accessed from a desktop, mobile, or any interface.
+- Create user signup and login pages for patients, doctors and admin staff.
+- Display booked appointments list for each doctor.

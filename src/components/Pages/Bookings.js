@@ -2,9 +2,7 @@ import DefaultLayout from "../Layout/DefaultLayout";
 import { useState, useEffect } from "react";
 
 const BookingsPage = () => {
-	const bookingsPara = `
-    All the appointments
-	`;
+	
 	const [newAppointment, setNewAppointment] = useState([])
     useEffect(() => {
 		fetch('https://64951068b08e17c917919c7c.mockapi.io/api/appointment')
@@ -15,8 +13,8 @@ const BookingsPage = () => {
 
 	return (
 		<DefaultLayout>
-			<h1>Appoinments</h1>
-			<h2>{ bookingsPara }</h2>
+			<h1>Bookings Page</h1>
+			<h1>Upcoming Appoinments</h1>
 			<section className="bookings">
             {newAppointment.map((appointment, index) => (
 				<div className="appointment" key={index}>

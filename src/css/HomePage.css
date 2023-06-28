@@ -1,3 +1,11 @@
+body {
+    /* background-image: url("https://media.istockphoto.com/id/1295900181/photo/healthcare-and-medicine-covid-19-doctor-holding-tablet-and-diagnose-virtual-human-lungs-with.jpg?s=1024x1024&w=is&k=20&c=UEeNqnrWBdxeRtCOb1bBRSmXyg2ZVIZTP9d-rdCZsTY="); */
+    /* background-size:auto;
+    background-repeat: no-repeat;  */
+    margin: 0; 
+    background-color: rgb(190, 221, 221);
+}
+
 .doctors-list {
     width: 100%;
     /* display: flex;
@@ -19,6 +27,7 @@
     box-shadow: 3px 3px 3px rgb(24, 66, 68);
     border-radius: 2rem;
     align-items: center;
+    background-color: whitesmoke;
 }
 
 .search {
@@ -37,4 +46,26 @@
     padding: 0 1rem;
     box-shadow: 3px 3px 3px rgb(24, 66, 68);
     border-radius: 1rem;
+    background-color: whitesmoke;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+form fieldset {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.doc {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+form input {
+    padding: 0.5rem;
+    width: 100%;
 }
