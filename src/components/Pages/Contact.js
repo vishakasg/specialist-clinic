@@ -10,9 +10,9 @@ const ContactUsPage = () => {
 
 	return (
 		<DefaultLayout>
-			<div className="contacts">
 				<h1>Contact Us</h1>
 				<h2>{ contactUsPara }</h2>
+			<div className="contacts">
 				<h3>Phone No: { phoneNo }</h3>
 				<h3>Address: { address }</h3>
 				<h3>Opening Hours: { hours }</h3>

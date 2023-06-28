@@ -77,7 +77,7 @@ const AppointmentsBookingPage = () => {
 					<input  type="time" name="time" value={ time } onChange={(e) => setTime(e.target.value)}/>
 					</fieldset>
 					<fieldset>
-					<button>Submit</button>
+					<button className="submit">Submit</button>
 					</fieldset>
 				</form>
 

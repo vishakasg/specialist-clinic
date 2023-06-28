@@ -1,7 +1,4 @@
 body {
-    /* background-image: url("https://media.istockphoto.com/id/1295900181/photo/healthcare-and-medicine-covid-19-doctor-holding-tablet-and-diagnose-virtual-human-lungs-with.jpg?s=1024x1024&w=is&k=20&c=UEeNqnrWBdxeRtCOb1bBRSmXyg2ZVIZTP9d-rdCZsTY="); */
-    /* background-size:auto;
-    background-repeat: no-repeat;  */
     margin: 0; 
     background-color: rgb(190, 221, 221);
 }
@@ -68,4 +65,11 @@ form fieldset {
 form input {
     padding: 0.5rem;
     width: 100%;
+}
+
+.submit {
+    background-color: whitesmoke;
+    width: 100px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
