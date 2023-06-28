@@ -12,8 +12,8 @@ Some features of the app:
 - Users able to check upcoming appointments list.
 
 ## Wireframe
-![wireframe](src/wireframe1.png)
 ![wireframe](src/wireframe2.png)
+![wireframe](src/wireframe1.png)
 
 
 ## 🚀 Cool tech
