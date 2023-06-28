@@ -12,7 +12,8 @@ Some features of the app:
 - Users able to check upcoming appointments list.
 
 ## Wireframe
-![wireframe](static/images/wireframe.png)
+![wireframe](src/wireframe1.png)
+![wireframe](src/wireframe2.png)
 
 
 ## 🚀 Cool tech
@@ -36,5 +37,5 @@ Some features of the app:
 
 ## ✅ Future features
 - Make the app more responsive to accessed from a desktop, mobile, or any interface.
-- Create user signup and login pages for patients, doctors and admin staff.
+- Create user accounts for patients, doctors and admin staff.
 - Display booked appointments list for each doctor.
