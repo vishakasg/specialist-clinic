@@ -1,4 +1,4 @@
-import { Search } from "@mui/icons-material";
+// import { Search } from "@mui/icons-material";
 import DefaultLayout from "../Layout/DefaultLayout";
 import { useEffect, useState } from "react";
 import "../../css/HomePage.css"
@@ -23,10 +23,11 @@ const DoctorsListPage = () => {
 			<h1>Doctors List Page</h1>
 			<h1>Our Team</h1>
 			<h2>{ listPageParagraph }</h2>
-			<div >
+			<div className="search" >
 				<input type="text" onChange={(e) => {
           setSearchQuery(e.target.value);}} placeholder="Search Doctors"/>
 			</div>
+			
 			<section className="doctors-list">
 			{doctorsList
 			.filter((res) => {
@@ -39,8 +40,8 @@ const DoctorsListPage = () => {
 				}
 			  })
 			.map((doctor, index) => (
-				<div id={doctor.name} key={index}>
-					<h3>{doctor.id}. {doctor.name}</h3>
+				<div className="doctor" id={doctor.name} key={index}>
+					<h3>{doctor.name}</h3>
 					<h4>{doctor.speciality}</h4>
 					<img src={doctor.image} alt={doctor.name} />
 				</div>

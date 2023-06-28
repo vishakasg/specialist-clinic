@@ -1,5 +1,5 @@
 import DefaultLayout from "../Layout/DefaultLayout";
-import DoctorsListPage from "./List";
+// import DoctorsListPage from "./List";
 import { useState, useEffect } from "react";
 
 const AppointmentsBookingPage = () => {
@@ -18,7 +18,7 @@ const AppointmentsBookingPage = () => {
 		fetch('https://64951068b08e17c917919c7c.mockapi.io/api/doctors')
 		.then(res => res.json())
 		.then(res => setDoctorsList(res))
-		console.log(doctorsList)
+		// console.log(doctorsList)
 	} , [])
 	
 	const handleBooking = (event) => {
@@ -34,12 +34,7 @@ const AppointmentsBookingPage = () => {
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(data)
 			  })
-				.then(res => res.json())
-				// .then(event => {
-				//   state.events.push(event)
-				  
-				// })
-			
+				.then(res => res.json())	
 		}
 		
 	
@@ -49,12 +44,12 @@ const AppointmentsBookingPage = () => {
 		<DefaultLayout>
 
 			<h1>Appointments Booking Page</h1>
-			<p>{ appointmentsBookingPara }</p>
+			<h2>Appointment Requests</h2>
 				<form onSubmit={ handleBooking }> 
-					<h2>Appointment Requests</h2>
+					<h5>{ appointmentsBookingPara}</h5>
 					<fieldset>
 					<label for="">Patient Name: </label>
-            		<input type="text" name="patient-name" value={ name } onChange={(e) => setName(e.target.value)}></input>
+            		<input type="text" name="patientName" value={ name } onChange={(e) => setName(e.target.value)}></input>
 					</fieldset>
 					<fieldset>
 					<label for="">Email: </label>
@@ -62,13 +57,13 @@ const AppointmentsBookingPage = () => {
 					</fieldset>
 					<fieldset>
 					<label for="">Phone: </label>
-            		<input type="text" name="phone-no" value={ phoneNo } onChange={(e) => setPhoneNo(e.target.value)}></input>
+            		<input type="text" name="phoneNo" value={ phoneNo } onChange={(e) => setPhoneNo(e.target.value)}></input>
 					</fieldset>
 					<fieldset>
 					<label for="">Preferred Doctor: </label>
-					<select>
+					<select name="doctorName">
 					{doctorsList.map((doctor, index) => (
-					<option className="doctor-name" id={doctor.name} key={index}>{doctor.name}</option>
+					<option id={doctor.name} key={index}>{doctor.name}</option>
 					))}
 					</select>
 					</fieldset>

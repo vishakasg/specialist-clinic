@@ -17,13 +17,16 @@ const BookingsPage = () => {
 		<DefaultLayout>
 			<h1>Appoinments</h1>
 			<h2>{ bookingsPara }</h2>
+			<section className="bookings">
             {newAppointment.map((appointment, index) => (
-				<div id={appointment.patientName} key={index}>
-					<h4>{appointment.patientName}</h4>
-					<h4>{appointment.date}</h4>
-					<h4>{appointment.time}</h4>
+				<div className="appointment" key={index}>
+					<h4>{appointment.id}. {appointment.doctorName}</h4>
+                    <h4>Patient Name: {appointment.patientName}</h4>
+					<h4>Date: {appointment.date}</h4>
+					<h4>Time: {appointment.time}</h4>
 				</div>
 			))}
+			</section>
         </DefaultLayout>	
 	);
 };
